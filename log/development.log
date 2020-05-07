@@ -1,0 +1,4 @@
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE DATABASE "traveldreams_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "traveldreams_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (243.9ms)[0m  [1m[35mCREATE DATABASE "traveldreams_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (85.7ms)[0m  [1m[35mCREATE DATABASE "traveldreams_api_test" ENCODING = 'unicode'[0m
