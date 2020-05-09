@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users
+    render json: @users.to_json(include: :locations)
   end
 
   # GET /users/1

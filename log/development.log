@@ -202,3 +202,1575 @@ Processing by UsersController#show as */*
 Completed 200 OK in 143ms (Views: 0.2ms | ActiveRecord: 134.8ms | Allocations: 2098)
 
 
+Started GET "/users" for 127.0.0.1 at 2020-05-09 12:03:52 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 19.5ms | ActiveRecord: 3.5ms | Allocations: 1087)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 12:04:34 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (19.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 89ms (Views: 11.1ms | ActiveRecord: 65.2ms | Allocations: 7147)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-05-09 12:19:26 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 171ms (Views: 0.1ms | ActiveRecord: 103.3ms | Allocations: 18655)
+
+
+Started GET "/locations" for ::1 at 2020-05-09 12:22:31 -0400
+Processing by LocationsController#index as */*
+  [1m[36mLocation Load (14.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 97ms (Views: 31.2ms | ActiveRecord: 61.7ms | Allocations: 9603)
+
+
+Started GET "/locations/2" for ::1 at 2020-05-09 12:22:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/locations/2"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/locations" for ::1 at 2020-05-09 12:23:07 -0400
+Processing by LocationsController#index as */*
+  [1m[36mLocation Load (56.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 61ms (Views: 4.1ms | ActiveRecord: 56.4ms | Allocations: 1291)
+
+
+Started GET "/locations/2" for ::1 at 2020-05-09 12:24:07 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:45:in `set_location'
+Completed 200 OK in 153ms (Views: 1.0ms | ActiveRecord: 68.3ms | Allocations: 9279)
+
+
+Started PUT "/locations/2" for ::1 at 2020-05-09 12:24:21 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/locations/2"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1/locations" for ::1 at 2020-05-09 12:24:32 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/locations"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1" for ::1 at 2020-05-09 12:24:37 -0400
+Processing by UsersController#update as */*
+  Parameters: {"location"=>{"season"=>"spring"}, "id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 400 Bad Request in 124ms (ActiveRecord: 80.9ms | Allocations: 5665)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:49:in `user_params'
+app/controllers/users_controller.rb:29:in `update'
+Started GET "/users/1" for ::1 at 2020-05-09 12:24:46 -0400
+Processing by UsersController#show as */*
+  Parameters: {"location"=>{"season"=>"spring"}, "id"=>"1"}
+  [1m[36mUser Load (30.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 30.4ms | Allocations: 2381)
+
+
+Started GET "/users/1/locations/2" for ::1 at 2020-05-09 12:25:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations/2"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/locations" for ::1 at 2020-05-09 12:25:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1/locations/2" for ::1 at 2020-05-09 12:26:07 -0400
+Processing by LocationsController#update as */*
+  Parameters: {"location"=>{"season"=>"spring"}, "user_id"=>"1", "id"=>"2"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:45:in `set_location'
+  [1m[35m (11.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:30:in `update'
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:30:in `update'
+  [1m[36mLocation Update (21.7ms)[0m  [1m[33mUPDATE "locations" SET "season" = $1, "updated_at" = $2 WHERE "locations"."id" = $3[0m  [["season", "spring"], ["updated_at", "2020-05-09 16:26:07.734891"], ["id", 2]]
+  ↳ app/controllers/locations_controller.rb:30:in `update'
+  [1m[35m (72.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:30:in `update'
+Completed 200 OK in 149ms (Views: 1.0ms | ActiveRecord: 131.9ms | Allocations: 5037)
+
+
+Started GET "/users/1" for ::1 at 2020-05-09 12:26:24 -0400
+Processing by UsersController#show as */*
+  Parameters: {"location"=>{"season"=>"spring"}, "id"=>"1"}
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (40.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 86ms (Views: 0.2ms | ActiveRecord: 66.0ms | Allocations: 2104)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-05-09 12:26:34 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (107.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (4.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 118ms (Views: 0.2ms | ActiveRecord: 111.2ms | Allocations: 2099)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-05-09 12:36:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 23.8ms | Allocations: 2238)
+
+
+Started GET "/locations" for ::1 at 2020-05-09 12:49:22 -0400
+Processing by LocationsController#index as */*
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 30.6ms | ActiveRecord: 1.4ms | Allocations: 1396)
+
+
+Started GET "/locations/1" for ::1 at 2020-05-09 12:50:28 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:45:in `set_location'
+Completed 200 OK in 95ms (Views: 1.4ms | ActiveRecord: 4.6ms | Allocations: 938)
+
+
+Started GET "/locations" for ::1 at 2020-05-09 12:50:34 -0400
+Processing by LocationsController#index as */*
+  [1m[36mLocation Load (10.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 17.8ms | ActiveRecord: 10.4ms | Allocations: 1301)
+
+
+Started GET "/users/1" for ::1 at 2020-05-09 12:52:20 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (4.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 238ms (Views: 0.9ms | ActiveRecord: 5.4ms | Allocations: 2107)
+
+
+Started GET "/users/1/locations" for ::1 at 2020-05-09 12:52:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/locations/1" for ::1 at 2020-05-09 12:52:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations/1"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-05-09 12:52:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (86.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 104ms (Views: 0.3ms | ActiveRecord: 88.3ms | Allocations: 2098)
+
+
+Started GET "/users" for ::1 at 2020-05-09 12:58:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms | Allocations: 51785)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  
+NameError (undefined local variable or method `locations' for #<UsersController:0x00007fae40c115b0>
+Did you mean?  location
+               location=):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for ::1 at 2020-05-09 12:58:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 100ms (Views: 0.2ms | ActiveRecord: 54.1ms | Allocations: 15749)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 12:59:22 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (77.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (448.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 532ms (Views: 0.3ms | ActiveRecord: 526.0ms | Allocations: 2205)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 12:59:59 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (52.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (81.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 140ms (Views: 0.2ms | ActiveRecord: 133.5ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:00:25 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (44.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 0.1ms | ActiveRecord: 46.2ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:01:39 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 104ms (Views: 0.1ms | ActiveRecord: 52.8ms | Allocations: 22261)
+
+
+Started GET "/users" for ::1 at 2020-05-09 13:01:48 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (24.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 25.3ms | Allocations: 2217)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-05-09 13:01:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (45.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 50.5ms | Allocations: 2252)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:02:06 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (38.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 43.1ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:02:17 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 2217)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:03:59 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 2217)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:04:18 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 7.7ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:04:33 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:06:21 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (29.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 32.6ms | Allocations: 2199)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-05-09 13:07:08 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (75.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (7.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 89ms (Views: 0.1ms | ActiveRecord: 82.4ms | Allocations: 2102)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-05-09 13:07:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 2099)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:07:27 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:07:49 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 5.1ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:08:34 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (31.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 37.6ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:10:40 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 25.6ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:11:34 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:11:58 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (84.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (10.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 113ms (Views: 12.2ms | ActiveRecord: 94.1ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:13:17 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (42.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 44.0ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:15:28 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (34.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (6.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 40.7ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:18:24 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (77.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (3.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 87ms (Views: 0.3ms | ActiveRecord: 80.4ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:19:14 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 12.0ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:19:56 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:20:09 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (45.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (37.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 82.8ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:20:39 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 8.1ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 13:21:13 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (48.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 0.1ms | ActiveRecord: 48.7ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:32:38 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (3.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 1.1ms | ActiveRecord: 26.0ms | Allocations: 2325)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:33:42 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:34:22 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (28.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (9.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 38.0ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:38:51 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (2.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:39:44 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 2199)
+
+
+Started GET "/users/locations" for ::1 at 2020-05-09 14:43:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"locations"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.8ms | Allocations: 673)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=locations):
+  
+app/controllers/users_controller.rb:44:in `set_user'
+Started GET "/users/1/locations" for ::1 at 2020-05-09 14:44:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-05-09 14:44:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 6.5ms | Allocations: 2151)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:54:55 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 2326)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:55:44 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (43.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 44.0ms | Allocations: 2199)
+
+
+Started GET "/App.js" for 127.0.0.1 at 2020-05-09 14:55:44 -0400
+Started GET "/Users.js" for 127.0.0.1 at 2020-05-09 14:55:44 -0400
+Started GET "/src/index.js" for 127.0.0.1 at 2020-05-09 14:55:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/App.js"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.js"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/Users.js"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/App.js" for 127.0.0.1 at 2020-05-09 14:55:45 -0400
+Started GET "/src/index.js" for 127.0.0.1 at 2020-05-09 14:55:45 -0400
+Started GET "/Users.js" for 127.0.0.1 at 2020-05-09 14:55:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/src/index.js"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/App.js"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/Users.js"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:56:07 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (199.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 211ms (Views: 0.2ms | ActiveRecord: 202.0ms | Allocations: 2198)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 14:56:27 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (54.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (29.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 93ms (Views: 0.1ms | ActiveRecord: 83.9ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:03:25 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (123.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 131ms (Views: 0.3ms | ActiveRecord: 124.5ms | Allocations: 2325)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:03:54 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (58.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (27.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 95ms (Views: 0.3ms | ActiveRecord: 85.9ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:09:41 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (25.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 0.3ms | ActiveRecord: 29.7ms | Allocations: 2324)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:12:21 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (60.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 107ms (Views: 0.1ms | ActiveRecord: 72.6ms | Allocations: 2201)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:21:06 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 3.6ms | Allocations: 2324)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:24:09 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 29.5ms | Allocations: 2199)
+
+
+Started GET "/users/1/locations" for ::1 at 2020-05-09 15:31:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/locations/1" for ::1 at 2020-05-09 15:31:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations/1"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/locations" for ::1 at 2020-05-09 15:31:38 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.5ms | Allocations: 1430)
+
+
+Started GET "/users" for ::1 at 2020-05-09 15:31:55 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 6.1ms | Allocations: 2227)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 15:52:38 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 96ms (Views: 1.5ms | ActiveRecord: 14.9ms | Allocations: 2324)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:01:00 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 2324)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:04:15 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (35.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (3.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 39.4ms | Allocations: 2200)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:04:37 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:07:01 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (49.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (8.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 57.8ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:08:10 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (24.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 25.2ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:30:03 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (20.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 1.0ms | ActiveRecord: 21.7ms | Allocations: 2326)
+
+
+Started GET "/users/1" for ::1 at 2020-05-09 16:33:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (2.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 115ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 2101)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:45:26 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 29.1ms | Allocations: 2324)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-09 16:46:33 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Susan", "interests"=>"castles", "user"=>{"name"=>"Susan", "interests"=>"castles"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Susan"], ["interests", "castles"], ["created_at", "2020-05-09 20:46:33.960295"], ["updated_at", "2020-05-09 20:46:33.960295"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 51ms (Views: 2.6ms | ActiveRecord: 31.5ms | Allocations: 3017)
+
+
+Started GET "/users" for ::1 at 2020-05-09 16:47:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 3230)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:48:07 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 3232)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:49:01 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (26.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 0.5ms | ActiveRecord: 28.3ms | Allocations: 3232)
+
+
+Started GET "/users/2" for ::1 at 2020-05-09 16:49:14 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 83ms (Views: 0.7ms | ActiveRecord: 6.0ms | Allocations: 1668)
+
+
+Started DELETE "/users/2" for ::1 at 2020-05-09 16:49:23 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mUser Destroy (2.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+Completed 204 No Content in 21ms (ActiveRecord: 8.4ms | Allocations: 2529)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:49:27 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (78.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 88ms (Views: 0.8ms | ActiveRecord: 80.6ms | Allocations: 2199)
+
+
+Started GET "/users" for ::1 at 2020-05-09 16:49:40 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (34.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (7.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 0.1ms | ActiveRecord: 42.7ms | Allocations: 2199)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-09 16:49:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Susan", "interests"=>"castles", "user"=>{"name"=>"Susan", "interests"=>"castles"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Susan"], ["interests", "castles"], ["created_at", "2020-05-09 20:49:48.707534"], ["updated_at", "2020-05-09 20:49:48.707534"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 2683)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 16:52:06 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (192.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (14.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 253ms (Views: 2.1ms | ActiveRecord: 208.4ms | Allocations: 3232)
+
+
+Started GET "/users/2" for ::1 at 2020-05-09 16:59:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (28.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 404 Not Found in 40ms (ActiveRecord: 29.6ms | Allocations: 768)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:44:in `set_user'
+Started GET "/users" for ::1 at 2020-05-09 16:59:21 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 99ms (Views: 0.2ms | ActiveRecord: 10.5ms | Allocations: 3257)
+
+
+Started GET "/users/3" for ::1 at 2020-05-09 16:59:32 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (19.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 22.0ms | Allocations: 1661)
+
+
+Started DELETE "/users/3" for ::1 at 2020-05-09 16:59:38 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mUser Destroy (31.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+Completed 204 No Content in 92ms (ActiveRecord: 79.1ms | Allocations: 2504)
+
+
+Started GET "/users" for ::1 at 2020-05-09 16:59:48 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (128.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (89.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 237ms (Views: 0.2ms | ActiveRecord: 218.0ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:00:37 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (88.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 97ms (Views: 0.4ms | ActiveRecord: 89.1ms | Allocations: 2199)
+
+
+Started GET "/users" for ::1 at 2020-05-09 17:04:53 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2197)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:12:14 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (30.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 32.1ms | Allocations: 2325)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:12:43 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (31.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 33.2ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:15:11 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (5.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 14.1ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:15:12 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 2199)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:18:57 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (245.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (37.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 290ms (Views: 0.2ms | ActiveRecord: 282.2ms | Allocations: 2200)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-09 17:19:05 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Susan", "interests"=>"castles", "user"=>{"name"=>"Susan", "interests"=>"castles"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Susan"], ["interests", "castles"], ["created_at", "2020-05-09 21:19:05.063114"], ["updated_at", "2020-05-09 21:19:05.063114"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 15ms (Views: 1.7ms | ActiveRecord: 4.2ms | Allocations: 2683)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:19:26 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (23.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 24.6ms | Allocations: 3232)
+
+
+Started GET "/users/4" for ::1 at 2020-05-09 17:19:43 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (26.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 54ms (Views: 0.2ms | ActiveRecord: 31.5ms | Allocations: 1668)
+
+
+Started DELETE "/users/4" for ::1 at 2020-05-09 17:19:56 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mUser Destroy (3.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+Completed 204 No Content in 46ms (ActiveRecord: 33.1ms | Allocations: 2504)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:20:18 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (33.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 0.2ms | ActiveRecord: 34.4ms | Allocations: 2199)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-09 17:20:25 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Susan", "interests"=>"castles", "user"=>{"name"=>"Susan", "interests"=>"castles"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (24.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Susan"], ["interests", "castles"], ["created_at", "2020-05-09 21:20:25.231830"], ["updated_at", "2020-05-09 21:20:25.231830"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 33ms (Views: 0.6ms | ActiveRecord: 25.5ms | Allocations: 2681)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:20:33 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (132.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (3.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 146ms (Views: 0.1ms | ActiveRecord: 136.8ms | Allocations: 3233)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:23:47 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (33.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 35.8ms | Allocations: 3232)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:28:08 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (371.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (21.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (3.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 413ms (Views: 0.2ms | ActiveRecord: 396.4ms | Allocations: 3233)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:28:22 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (138.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (12.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (76.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 243ms (Views: 0.2ms | ActiveRecord: 228.2ms | Allocations: 3233)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:28:59 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (39.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (28.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 80ms (Views: 0.3ms | ActiveRecord: 68.7ms | Allocations: 3232)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:34:51 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (31.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (195.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 252ms (Views: 0.2ms | ActiveRecord: 233.4ms | Allocations: 3357)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:41:23 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (2.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 0.7ms | ActiveRecord: 28.1ms | Allocations: 3359)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:43:06 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (219.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (34.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 269ms (Views: 0.2ms | ActiveRecord: 256.3ms | Allocations: 3234)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:43:11 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (187.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (20.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 228ms (Views: 0.3ms | ActiveRecord: 212.9ms | Allocations: 3232)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-09 17:43:25 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Jane", "interests"=>"beaches", "user"=>{"name"=>"Jane", "interests"=>"beaches"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (15.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jane"], ["interests", "beaches"], ["created_at", "2020-05-09 21:43:25.454320"], ["updated_at", "2020-05-09 21:43:25.454320"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 60ms (Views: 1.2ms | ActiveRecord: 48.6ms | Allocations: 2681)
+
+
+Started POST "/users/6/locations" for 127.0.0.1 at 2020-05-09 17:43:25 -0400
+Processing by LocationsController#create as HTML
+  Parameters: {"country"=>"Aruba", "user_id"=>"6", "location"=>{"country"=>"Aruba"}}
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+  [1m[36mLocation Create (6.0ms)[0m  [1m[32mINSERT INTO "locations" ("country", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["country", "Aruba"], ["created_at", "2020-05-09 21:43:25.609965"], ["updated_at", "2020-05-09 21:43:25.609965"], ["user_id", 6]]
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+Completed 201 Created in 66ms (Views: 0.8ms | ActiveRecord: 15.1ms | Allocations: 4154)
+
+
+Started GET "/users" for ::1 at 2020-05-09 17:43:45 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (443.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (30.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (137.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 660ms (Views: 0.2ms | ActiveRecord: 614.8ms | Allocations: 4445)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-05-09 17:47:48 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (4.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (25.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 37.9ms | Allocations: 4444)
+
+
