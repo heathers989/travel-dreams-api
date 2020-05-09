@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create([
+    { name: 'Heather',
+      hometown: 'Harrison, NY',
+      interests: 'waterfalls, mountains, wineries' }
+])
+
+Location.create([
+    { country: "Italy",
+      city: 'Naples',
+      image: "https://i.ytimg.com/vi/Jv_wD5jvNzk/maxresdefault.jpg",
+      landmarks: 'Blue Grotto on Capri island',
+      season: 'summer',
+      user_id: 1
+     }
+])

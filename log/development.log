@@ -42,3 +42,43 @@ Migrating to ChangeColumnName (20200507031646)
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4761663504665719260)[0m
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2020-05-08 23:40:33 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 3.6ms | ActiveRecord: 6.8ms | Allocations: 2932)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (9.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "hometown", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Heather"], ["hometown", "Harrison, NY"], ["interests", "waterfalls, mountains, wineries"], ["created_at", "2020-05-09 03:56:17.744850"], ["updated_at", "2020-05-09 03:56:17.744850"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2020-05-08 23:56:32 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 9.8ms | ActiveRecord: 23.5ms | Allocations: 7144)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (3.1ms)[0m  [1m[32mINSERT INTO "locations" ("country", "city", "image", "landmarks", "created_at", "updated_at", "season", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["country", "Italy"], ["city", "Naples"], ["image", "https://i.ytimg.com/vi/Jv_wD5jvNzk/maxresdefault.jpg"], ["landmarks", "Blue Grotto on Capri island"], ["created_at", "2020-05-09 03:57:00.376593"], ["updated_at", "2020-05-09 03:57:00.376593"], ["season", "summer"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2020-05-08 23:57:13 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 10.0ms | ActiveRecord: 15.6ms | Allocations: 7144)
+
+
+Started GET "/locations" for ::1 at 2020-05-08 23:57:23 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 17.5ms | ActiveRecord: 30.2ms | Allocations: 10086)
+
+
