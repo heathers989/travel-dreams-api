@@ -16,9 +16,10 @@ class LocationsController < ApplicationController
   # POST /locations
   def create
     @location = Location.new(location_params)
+    @location.user_id = params[:user_id]
 
     if @location.save
-      render json: @location, status: :created, location: @location
+      render json: @location, status: :created
     else
       render json: @location.errors, status: :unprocessable_entity
     end

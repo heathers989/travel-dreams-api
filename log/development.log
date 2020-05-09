@@ -123,3 +123,82 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 84ms (Views: 0.2ms | ActiveRecord: 32.6ms | Allocations: 15973)
 
 
+Started GET "/users" for ::1 at 2020-05-09 11:10:46 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 15.2ms | ActiveRecord: 33.5ms | Allocations: 7144)
+
+
+Started GET "/users/1" for ::1 at 2020-05-09 11:11:01 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 168ms (Views: 0.8ms | ActiveRecord: 19.1ms | Allocations: 15970)
+
+
+Started GET "/users/1/locations" for ::1 at 2020-05-09 11:17:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/locations"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-05-09 11:17:37 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 112ms (Views: 0.2ms | ActiveRecord: 99.3ms | Allocations: 2027)
+
+
+Started POST "/users/1/locations" for ::1 at 2020-05-09 11:21:08 -0400
+Processing by LocationsController#create as */*
+  Parameters: {"location"=>{"country"=>"The Netherlands", "city"=>"Amsterdam", "image"=>"https://www.washingtonpost.com/resizer/HQhRMQ_F3TkZfio_SBH7nVW1q8c=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/SJRWHWEPEAI6VEZCUKPHL374SM.jpg", "landmarks"=>"canals, tulip fields", "season"=>"spring"}, "user_id"=>"1"}
+[31mUnpermitted parameter: :season[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+  [1m[36mLocation Create (28.5ms)[0m  [1m[32mINSERT INTO "locations" ("country", "city", "image", "landmarks", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["country", "The Netherlands"], ["city", "Amsterdam"], ["image", "https://www.washingtonpost.com/resizer/HQhRMQ_F3TkZfio_SBH7nVW1q8c=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/SJRWHWEPEAI6VEZCUKPHL374SM.jpg"], ["landmarks", "canals, tulip fields"], ["created_at", "2020-05-09 15:21:08.536585"], ["updated_at", "2020-05-09 15:21:08.536585"], ["user_id", 1]]
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:21:in `create'
+Completed 201 Created in 50ms (Views: 0.5ms | ActiveRecord: 32.4ms | Allocations: 4489)
+
+
+Started GET "/users/1" for ::1 at 2020-05-09 11:21:25 -0400
+Processing by UsersController#show as */*
+  Parameters: {"location"=>{"country"=>"The Netherlands", "city"=>"Amsterdam", "image"=>"https://www.washingtonpost.com/resizer/HQhRMQ_F3TkZfio_SBH7nVW1q8c=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/SJRWHWEPEAI6VEZCUKPHL374SM.jpg", "landmarks"=>"canals, tulip fields", "season"=>"spring"}, "id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mLocation Load (133.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 143ms (Views: 0.2ms | ActiveRecord: 134.8ms | Allocations: 2098)
+
+
