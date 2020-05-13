@@ -35438,3 +35438,11 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 12.0ms | Allocations: 2049)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "hometown", "interests", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Heather"], ["hometown", "Harrison, NY"], ["interests", "waterfalls, mountains, wineries"], ["created_at", "2020-05-13 17:29:15.168707"], ["updated_at", "2020-05-13 17:29:15.168707"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.7ms)[0m  [1m[32mINSERT INTO "locations" ("country", "city", "image", "landmarks", "created_at", "updated_at", "season", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["country", "Italy"], ["city", "Naples"], ["image", "https://www.bluegrottotours.com/wp-content/uploads/2017/12/DSC0059_mod-300x199.jpg"], ["landmarks", "Blue Grotto on Capri island"], ["created_at", "2020-05-13 17:29:15.211795"], ["updated_at", "2020-05-13 17:29:15.211795"], ["season", "summer"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
