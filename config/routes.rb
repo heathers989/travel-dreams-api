@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   resources :locations, only: [:index, :show]
   resources :users do
     resources :locations, only: [:create, :update, :destroy]
