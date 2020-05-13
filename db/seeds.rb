@@ -15,7 +15,7 @@ User.create([
 Location.create([
     { country: "Italy",
       city: 'Naples',
-      image: "https://i.ytimg.com/vi/Jv_wD5jvNzk/maxresdefault.jpg",
+      image: "https://www.bluegrottotours.com/wp-content/uploads/2017/12/DSC0059_mod-300x199.jpg",
       landmarks: 'Blue Grotto on Capri island',
       season: 'summer',
       user_id: 1
